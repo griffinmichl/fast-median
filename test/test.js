@@ -6,10 +6,27 @@ test('median returns undefined for empty arrays', (t) => {
   t.equal(median([]), undefined)
 })
 
+test('median throws when passed a non-array', (t) => {
+  t.plan(3)
+  t.throws(() => median())
+  t.throws(() => median(1))
+  t.throws(() => median('a'))
+})
+
+test('median throws when array contains non-numbers', (t) => {
+  t.plan(5)
+  t.throws(() => median(['a', 'b', 'c']))
+  t.throws(() => median([undefined, undefined, undefined]))
+  t.throws(() => median([NaN, NaN, NaN]))
+  t.throws(() => median([[1], [2], [3]]))
+  t.throws(() => median([{}, {}, {}]))
+})
+
 test('median returns only element in array of length 1', (t) => {
   t.plan(1)
   t.equal(median([1]), 1)
 })
+
 
 test('median does not mutate the original array', (t) => {
   t.plan(3)

@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/gm758/fast-median#readme",
   "dependencies": {
+    "is-number": "^2.1.0",
     "kth-smallest": "^2.2.2"
   },
   "devDependencies": {
