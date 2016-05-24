@@ -1,6 +1,6 @@
 {
   "name": "fast-median",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find median of an array in amortized linear time",
   "main": "lib/index.js",
   "scripts": {
