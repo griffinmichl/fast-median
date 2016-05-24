@@ -55,8 +55,8 @@ test('median finds the middle element in array with odd length', (t) => {
 
 test('median finds the average of two middle elements in array with even length', (t) => {
   t.plan(3)
-  t.equal(median([1,2,3,4]), 3.5)
-  t.equal(median([4,3,2,1]), 3.5)
-  t.equal(median([1,4,2,3]), 3.5)
+  t.equal(median([1,2,3,4]), 2.5)
+  t.equal(median([4,3,2,1]), 2.5)
+  t.equal(median([1,4,2,3]), 2.5)
 })
 

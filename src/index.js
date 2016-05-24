@@ -15,12 +15,12 @@ function median(nums) {
   }
 
   const middleIndex = Math.floor(nums.length / 2)
-  const middleElementLeft = kthSmallest(nums, middleIndex)
+  const middleElementRight = kthSmallest(nums, middleIndex)
   if (nums.length % 2 === 0) {
-    const middleElementRight = kthSmallest(nums, middleIndex + 1)
+    const middleElementLeft = kthSmallest(nums, middleIndex - 1)
     return (middleElementLeft + middleElementRight) / 2
   } else {
-    return middleElementLeft
+    return middleElementRight
   }
 }
 
